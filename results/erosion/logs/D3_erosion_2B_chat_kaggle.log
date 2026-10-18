@@ -1,0 +1,15 @@
+GPU: Tesla T4 | dtype torch.bfloat16
+fast linear-attention kernels (fla): True
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Generating train split:   0%|          | 0/2251 [00:00<?, ? examples/s]Generating train split: 100%|██████████| 2251/2251 [00:00<00:00, 34381.17 examples/s]
+Generating test split:   0%|          | 0/2376 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 2376/2376 [00:00<00:00, 378591.59 examples/s]
+Generating validation split:   0%|          | 0/570 [00:00<?, ? examples/s]Generating validation split: 100%|██████████| 570/570 [00:00<00:00, 143528.44 examples/s]
+Generating train split:   0%|          | 0/12726 [00:00<?, ? examples/s]Generating train split:   8%|▊         | 1000/12726 [00:00<00:02, 4614.45 examples/s]Generating train split:  24%|██▎       | 3000/12726 [00:00<00:01, 8059.67 examples/s]Generating train split:  39%|███▉      | 5000/12726 [00:00<00:00, 11294.24 examples/s]Generating train split:  55%|█████▌    | 7000/12726 [00:00<00:00, 12096.50 examples/s]Generating train split:  79%|███████▊  | 10000/12726 [00:00<00:00, 13902.03 examples/s]Generating train split: 100%|██████████| 12726/12726 [00:01<00:00, 14640.43 examples/s]Generating train split: 100%|██████████| 12726/12726 [00:01<00:00, 12598.72 examples/s]
+Generating validation split:   0%|          | 0/4241 [00:00<?, ? examples/s]Generating validation split:  24%|██▎       | 1000/4241 [00:00<00:00, 7283.30 examples/s]Generating validation split: 100%|██████████| 4241/4241 [00:00<00:00, 18453.90 examples/s]Generating validation split: 100%|██████████| 4241/4241 [00:00<00:00, 16628.29 examples/s]
+Generating test split:   0%|          | 0/4241 [00:00<?, ? examples/s]Generating test split:  24%|██▎       | 1000/4241 [00:00<00:00, 8574.33 examples/s]Generating test split:  94%|█████████▍| 4000/4241 [00:00<00:00, 19853.32 examples/s]Generating test split: 100%|██████████| 4241/4241 [00:00<00:00, 18604.99 examples/s]
+ARC 300 (image 100) | refusal pairs 64 | ScienceQA 120 | RT 10 CT 14
+skill items: {'instruction': 80, 'maths': 60, 'tools': 48, 'charts': 60}
+
+=== benign ===
+Loading weights:   0%|          | 0/617 [00:00<?, ?it/s]Loading weights:  38%|███▊      | 235/617 [00:00<00:00, 2349.37it/s]Loading weights:  77%|███████▋  | 474/617 [00:00<00:00, 2368.09it/s]Loading weights: 100%|██████████| 617/617 [00:00<00:00, 2415.64it/s]
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.

@@ -1,0 +1,11 @@
+2026-09-25 16:04:59 waiting for pid 73814
+2026-09-26 03:57:28 start
+2026-09-26 03:57:28 >>> python3 gen_check.py (log: logs/gen_check.log)
+2026-09-26 04:22:19 <<< exit 0
+2026-09-26 04:22:19 >>> python3 local_e1_e2.py --arm benign --seed 1 (log: logs/local_e1_seed1_benign.log)
+2026-09-26 06:00:53 <<< exit 0
+2026-09-26 06:00:53 >>> python3 local_e1_e2.py --arm ood --seed 1 (log: logs/local_e1_seed1_ood.log)
+2026-09-26 07:41:21 <<< exit 0
+2026-09-26 07:41:21 >>> python3 exp_e_natural.py --model Qwen/Qwen3.5-2B --seed 0 (log: logs/E_natural_2B.log)
+2026-09-26 08:06:22 <<< exit 0
+2026-09-26 08:06:22 chain done

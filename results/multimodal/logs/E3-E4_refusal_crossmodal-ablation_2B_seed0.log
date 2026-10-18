@@ -1,0 +1,20 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/617 [00:00<?, ?it/s]Loading weights: 100%|██████████| 617/617 [00:00<00:00, 10456.02it/s]
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+legibility: ARC text 0.920 image 0.840 -> OK
+text_plain  harmful +4.80  harmless -2.44  gap +7.24
+text_wrap   harmful +5.06  harmless -3.03  gap +8.09
+image_wrap  harmful +3.80  harmless -1.94  gap +5.74
+geometry: {"layer": 19, "random_floor_deg": 89.90130013191435, "split_half_deg": {"text_plain": 9.665482298230433, "text_wrap": 9.009745090718143, "image_wrap": 9.763318327574765}, "d_oos": {"text_plain": 6.110081672668457, "text_wrap": 5.702474117279053, "image_wrap": 3.4971601963043213}, "angle_deg": {"text_plain|text_wrap": 13.178559881940217, "text_plain|image_wrap": 42.36264388115221, "text_wrap|image_
+ablate text_dir   text gap kept 0.05  image gap kept 0.35  ARC t/i 0.93/0.86
+ablate image_dir  text gap kept -0.01  image gap kept 0.06  ARC t/i 0.92/0.87
+ablate random_dir text gap kept 0.99  image gap kept 1.02  ARC t/i 0.91/0.85
+  [PASS] legible
+  [PASS] text_dir_reproducible
+  [PASS] image_dir_reproducible
+  [PASS] text_separable
+  [PASS] image_refusal_present
+  [PASS] random_control_inert
+  [PASS] capability_intact
+done in 13.0 min -> results/E_crossmodal__Qwen3.5-2B__seed0.json

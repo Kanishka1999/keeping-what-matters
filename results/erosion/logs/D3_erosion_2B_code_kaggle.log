@@ -1,0 +1,15 @@
+GPU: Tesla T4 | dtype torch.bfloat16
+fast linear-attention kernels (fla): True
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+ARC 300 (image 100) | refusal pairs 64 | ScienceQA 120 | RT 10 CT 14
+Generating train split:   0%|          | 0/541 [00:00<?, ? examples/s]Generating train split: 100%|██████████| 541/541 [00:00<00:00, 44149.71 examples/s]
+Generating train split:   0%|          | 0/7473 [00:00<?, ? examples/s]Generating train split: 100%|██████████| 7473/7473 [00:00<00:00, 477303.35 examples/s]
+Generating test split:   0%|          | 0/1319 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 1319/1319 [00:00<00:00, 279549.62 examples/s]
+Generating train split:   0%|          | 0/28299 [00:00<?, ? examples/s]Generating train split:   7%|▋         | 2000/28299 [00:00<00:01, 14204.59 examples/s]Generating train split:  16%|█▌        | 4500/28299 [00:00<00:01, 19189.86 examples/s]Generating train split:  24%|██▍       | 6800/28299 [00:00<00:01, 20288.34 examples/s]Generating train split:  34%|███▎      | 9533/28299 [00:00<00:00, 18908.05 examples/s]Generating train split:  41%|████      | 11633/28299 [00:00<00:00, 19332.72 examples/s]Generating train split:  51%|█████▏    | 14533/28299 [00:00<00:00, 18835.85 examples/s]Generating train split:  58%|█████▊    | 16533/28299 [00:00<00:00, 18877.02 examples/s]Generating train split:  67%|██████▋   | 18966/28299 [00:01<00:00, 18138.75 examples/s]Generating train split:  74%|███████▎  | 20866/28299 [00:01<00:00, 17534.73 examples/s]Generating train split:  80%|████████  | 22666/28299 [00:01<00:00, 17173.16 examples/s]Generating train split:  87%|████████▋ | 24666/28299 [00:01<00:00, 17008.67 examples/s]Generating train split:  94%|█████████▍| 26566/28299 [00:01<00:00, 17343.86 examples/s]Generating train split: 100%|██████████| 28299/28299 [00:01<00:00, 18036.74 examples/s]
+Generating val split:   0%|          | 0/1920 [00:00<?, ? examples/s]Generating val split:  99%|█████████▉| 1900/1920 [00:00<00:00, 17818.29 examples/s]Generating val split: 100%|██████████| 1920/1920 [00:00<00:00, 17763.54 examples/s]
+Generating test split:   0%|          | 0/2500 [00:00<?, ? examples/s]Generating test split:  76%|███████▌  | 1900/2500 [00:00<00:00, 18279.73 examples/s]Generating test split: 100%|██████████| 2500/2500 [00:00<00:00, 19937.48 examples/s]
+skill items: {'instruction': 80, 'maths': 60, 'tools': 48, 'charts': 60}
+
+=== ood ===
+Loading weights:   0%|          | 0/617 [00:00<?, ?it/s]Loading weights:  39%|███▉      | 240/617 [00:00<00:00, 2384.52it/s]Loading weights:  78%|███████▊  | 479/617 [00:00<00:00, 2209.37it/s]Loading weights: 100%|██████████| 617/617 [00:00<00:00, 2387.61it/s]
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.

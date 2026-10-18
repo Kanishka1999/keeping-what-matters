@@ -1,0 +1,8 @@
+torch>=2.4
+transformers>=5.0
+datasets
+accelerate
+pillow
+numpy
+matplotlib
+# optional, CUDA only: flash-linear-attention (fast Gated DeltaNet kernels; verified before use)

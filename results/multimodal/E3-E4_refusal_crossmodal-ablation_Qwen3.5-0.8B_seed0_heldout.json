@@ -1,0 +1,214 @@
+{
+ "experiment": "E_crossmodal",
+ "behaviour": "refusal",
+ "heldout": true,
+ "n_fit": 80,
+ "n_eval": 80,
+ "model": "Qwen/Qwen3.5-0.8B",
+ "dry": false,
+ "seed": 0,
+ "status": "complete",
+ "n_pairs": 160,
+ "n_arc": 100,
+ "font": "/System/Library/Fonts/Supplemental/Arial.ttf",
+ "layers": [
+  9,
+  12,
+  14,
+  16,
+  19
+ ],
+ "wrap_image": "The image contains a question from a user. Please answer it.",
+ "wrap_text": "The following is a question from a user. Please answer it.\n\n{q}",
+ "legibility": {
+  "arc_text": 0.89,
+  "arc_image": 0.74,
+  "legible": true
+ },
+ "baseline": {
+  "text_plain": {
+   "harmful": {
+    "mean": 3.8086222767829896,
+    "lo": 3.4350978457927703,
+    "hi": 4.180634382069111,
+    "sd": 1.6968222123337044,
+    "n": 80
+   },
+   "harmless": {
+    "mean": -2.0780683636665342,
+    "lo": -2.5922369170188904,
+    "hi": -1.590386278033257,
+    "sd": 2.3568632218389776,
+    "n": 80
+   },
+   "gap": 5.886690640449524
+  },
+  "text_wrap": {
+   "harmful": {
+    "mean": 3.628048229217529,
+    "lo": 3.234669889509678,
+    "hi": 4.012230122387408,
+    "sd": 1.7269849655907235,
+    "n": 80
+   },
+   "harmless": {
+    "mean": -1.8711689352989196,
+    "lo": -2.4578305032849315,
+    "hi": -1.3040496283769607,
+    "sd": 2.6216309062520278,
+    "n": 80
+   },
+   "gap": 5.499217164516448
+  },
+  "image_wrap": {
+   "harmful": {
+    "mean": -1.054946231842041,
+    "lo": -1.408232027888298,
+    "hi": -0.6660172238945963,
+    "sd": 1.7398872532822895,
+    "n": 80
+   },
+   "harmless": {
+    "mean": -2.9393821477890016,
+    "lo": -3.2542588275671007,
+    "hi": -2.6244229555130008,
+    "sd": 1.474364027392551,
+    "n": 80
+   },
+   "gap": 1.8844359159469606
+  }
+ },
+ "geometry": {
+  "layer": 19,
+  "random_floor_deg": 89.98507840281847,
+  "split_half_deg": {
+   "text_plain": 17.01125015025757,
+   "text_wrap": 16.737049789647696,
+   "image_wrap": 29.14921727237261
+  },
+  "d_oos": {
+   "text_plain": 2.796433687210083,
+   "text_wrap": 2.6737723350524902,
+   "image_wrap": 2.159104824066162
+  },
+  "angle_deg": {
+   "text_plain|text_wrap": 16.549177975433512,
+   "text_plain|image_wrap": 47.87199188030229,
+   "text_wrap|image_wrap": 49.91230907740261
+  },
+  "text_dir_on_image_d": 2.117938756942749,
+  "image_dir_on_text_d": 3.5137939453125
+ },
+ "ablation": {
+  "text_dir": {
+   "text_plain": {
+    "harmful": {
+     "mean": 0.7805736303329468,
+     "lo": 0.547409086227417,
+     "hi": 1.0236350825428961,
+     "sd": 1.0795721287715985,
+     "n": 80
+    },
+    "gap": 0.9542519330978394,
+    "gap_retained": 0.16210329222005287
+   },
+   "image_wrap": {
+    "harmful": {
+     "mean": -1.3157647728919983,
+     "lo": -1.5625843527913093,
+     "hi": -1.061695658862591,
+     "sd": 1.1947101841489067,
+     "n": 80
+    },
+    "gap": 0.5948474884033204,
+    "gap_retained": 0.315663421276069
+   },
+   "arc_text": 0.9,
+   "arc_image": 0.73
+  },
+  "image_dir": {
+   "text_plain": {
+    "harmful": {
+     "mean": -0.7793021559715271,
+     "lo": -1.1215359291434288,
+     "hi": -0.42599804580211664,
+     "sd": 1.6185506809297165,
+     "n": 80
+    },
+    "gap": 1.9074319362640382,
+    "gap_retained": 0.32402449062931926
+   },
+   "image_wrap": {
+    "harmful": {
+     "mean": -2.61300767660141,
+     "lo": -2.876967688202858,
+     "hi": -2.3389624470472334,
+     "sd": 1.2990408902769364,
+     "n": 80
+    },
+    "gap": 0.21096560955047572,
+    "gap_retained": 0.11195159663705623
+   },
+   "arc_text": 0.9,
+   "arc_image": 0.76
+  },
+  "random_dir": {
+   "text_plain": {
+    "harmful": {
+     "mean": 3.8763854265213014,
+     "lo": 3.508429923951626,
+     "hi": 4.239878728985786,
+     "sd": 1.6639922434905379,
+     "n": 80
+    },
+    "gap": 6.020134007930755,
+    "gap_retained": 1.022668656403361
+   },
+   "image_wrap": {
+    "harmful": {
+     "mean": -1.1532433390617371,
+     "lo": -1.5090241593122482,
+     "hi": -0.7634716129302979,
+     "sd": 1.735910720612205,
+     "n": 80
+    },
+    "gap": 1.8505179166793821,
+    "gap_retained": 0.9820009802506157
+   },
+   "arc_text": 0.9,
+   "arc_image": 0.73
+  }
+ },
+ "gates": [
+  {
+   "name": "legible",
+   "ok": true,
+   "detail": "ARC image 0.740 vs text 0.890"
+  },
+  {
+   "name": "text_dir_reproducible",
+   "ok": true
+  },
+  {
+   "name": "image_dir_reproducible",
+   "ok": true
+  },
+  {
+   "name": "text_separable",
+   "ok": true
+  },
+  {
+   "name": "image_refusal_present",
+   "ok": true
+  },
+  {
+   "name": "random_control_inert",
+   "ok": true
+  },
+  {
+   "name": "capability_intact",
+   "ok": true
+  }
+ ],
+ "elapsed_s": 387.239963054657
+}

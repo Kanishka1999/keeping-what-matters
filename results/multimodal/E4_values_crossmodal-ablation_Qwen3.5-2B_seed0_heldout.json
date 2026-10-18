@@ -1,0 +1,214 @@
+{
+ "experiment": "E_crossmodal",
+ "behaviour": "value",
+ "heldout": true,
+ "n_fit": 170,
+ "n_eval": 170,
+ "model": "Qwen/Qwen3.5-2B",
+ "dry": false,
+ "seed": 0,
+ "status": "complete",
+ "n_pairs": 340,
+ "n_arc": 100,
+ "font": "/System/Library/Fonts/Supplemental/Arial.ttf",
+ "layers": [
+  9,
+  12,
+  14,
+  16,
+  19
+ ],
+ "wrap_image": "The image contains a question from a user. Please answer it.",
+ "wrap_text": "The following is a question from a user. Please answer it.\n\n{q}",
+ "legibility": {
+  "arc_text": 0.92,
+  "arc_image": 0.84,
+  "legible": true
+ },
+ "baseline": {
+  "text_plain": {
+   "endorses_A": {
+    "mean": 2.8727941176470586,
+    "lo": 2.6735110294117646,
+    "hi": 3.0661764705882355,
+    "sd": 1.2792779439798683,
+    "n": 170
+   },
+   "endorses_B": {
+    "mean": -2.5044117647058823,
+    "lo": -2.6904595588235294,
+    "hi": -2.3021875,
+    "sd": 1.3019453836890755,
+    "n": 170
+   },
+   "gap": 5.377205882352941
+  },
+  "text_wrap": {
+   "endorses_A": {
+    "mean": 2.2125,
+    "lo": 2.0198345588235296,
+    "hi": 2.4073529411764705,
+    "sd": 1.2549347857829298,
+    "n": 170
+   },
+   "endorses_B": {
+    "mean": -2.3176470588235296,
+    "lo": -2.5103676470588234,
+    "hi": -2.103676470588235,
+    "sd": 1.3590117990516901,
+    "n": 170
+   },
+   "gap": 4.5301470588235295
+  },
+  "image_wrap": {
+   "endorses_A": {
+    "mean": 1.7330882352941177,
+    "lo": 1.540045955882353,
+    "hi": 1.9430238970588236,
+    "sd": 1.3390053408479567,
+    "n": 170
+   },
+   "endorses_B": {
+    "mean": -0.39301470588235293,
+    "lo": -0.6345680147058823,
+    "hi": -0.12127757352941201,
+    "sd": 1.6715211355490516,
+    "n": 170
+   },
+   "gap": 2.1261029411764705
+  }
+ },
+ "geometry": {
+  "layer": 16,
+  "random_floor_deg": 89.90130013191435,
+  "split_half_deg": {
+   "text_plain": 32.24127163258394,
+   "text_wrap": 27.684752322746913,
+   "image_wrap": 45.82198250615802
+  },
+  "d_oos": {
+   "text_plain": 3.390307664871216,
+   "text_wrap": 4.282492637634277,
+   "image_wrap": 1.6407577991485596
+  },
+  "angle_deg": {
+   "text_plain|text_wrap": 23.33482458923636,
+   "text_plain|image_wrap": 41.150495294410895,
+   "text_wrap|image_wrap": 44.69218899273257
+  },
+  "text_dir_on_image_d": 2.207691192626953,
+  "image_dir_on_text_d": 3.107192039489746
+ },
+ "ablation": {
+  "text_dir": {
+   "text_plain": {
+    "endorses_A": {
+     "mean": -0.7948529411764705,
+     "lo": -0.9264889705882353,
+     "hi": -0.6477941176470589,
+     "sd": 0.914984144213929,
+     "n": 170
+    },
+    "gap": 2.049264705882353,
+    "gap_retained": 0.3811021468617531
+   },
+   "image_wrap": {
+    "endorses_A": {
+     "mean": 1.8419117647058822,
+     "lo": 1.6720588235294118,
+     "hi": 2.0243382352941173,
+     "sd": 1.155010959953304,
+     "n": 170
+    },
+    "gap": 0.9029411764705881,
+    "gap_retained": 0.4246930658827598
+   },
+   "arc_text": 0.88,
+   "arc_image": 0.77
+  },
+  "image_dir": {
+   "text_plain": {
+    "endorses_A": {
+     "mean": -0.5176470588235295,
+     "lo": -0.6580882352941176,
+     "hi": -0.36395220588235305,
+     "sd": 0.9931631936058193,
+     "n": 170
+    },
+    "gap": 1.8132352941176473,
+    "gap_retained": 0.3372077122931766
+   },
+   "image_wrap": {
+    "endorses_A": {
+     "mean": 1.7088235294117646,
+     "lo": 1.526829044117647,
+     "hi": 1.9143566176470588,
+     "sd": 1.2657861525781025,
+     "n": 170
+    },
+    "gap": 0.5356617647058823,
+    "gap_retained": 0.2519453570810998
+   },
+   "arc_text": 0.73,
+   "arc_image": 0.68
+  },
+  "random_dir": {
+   "text_plain": {
+    "endorses_A": {
+     "mean": 2.883088235294118,
+     "lo": 2.688970588235294,
+     "hi": 3.072077205882353,
+     "sd": 1.2487526407775635,
+     "n": 170
+    },
+    "gap": 4.969852941176471,
+    "gap_retained": 0.9242444961028308
+   },
+   "image_wrap": {
+    "endorses_A": {
+     "mean": 1.6636029411764706,
+     "lo": 1.469108455882353,
+     "hi": 1.8761121323529413,
+     "sd": 1.3404079557586641,
+     "n": 170
+    },
+    "gap": 1.9463235294117647,
+    "gap_retained": 0.9154418122081964
+   },
+   "arc_text": 0.91,
+   "arc_image": 0.85
+  }
+ },
+ "gates": [
+  {
+   "name": "legible",
+   "ok": true,
+   "detail": "ARC image 0.840 vs text 0.920"
+  },
+  {
+   "name": "text_dir_reproducible",
+   "ok": true
+  },
+  {
+   "name": "image_dir_reproducible",
+   "ok": false
+  },
+  {
+   "name": "text_separable",
+   "ok": true
+  },
+  {
+   "name": "image_value_present",
+   "ok": true
+  },
+  {
+   "name": "random_control_inert",
+   "ok": true
+  },
+  {
+   "name": "capability_intact",
+   "ok": false
+  }
+ ],
+ "elapsed_s": 1490.3913049697876
+}

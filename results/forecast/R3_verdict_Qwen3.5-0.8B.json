@@ -1,0 +1,22 @@
+{
+ "checked": "2026-09-26 01:44:41 UTC",
+ "measured_loss_pct": {
+  "legal": {
+   "text_plain": 1.2310517000263976,
+   "text_wrap": 6.0989185554189085,
+   "image_wrap": 0.20297698222233596
+  },
+  "news": {
+   "text_plain": 1.4555337192482365,
+   "text_wrap": 6.2283242920606945,
+   "image_wrap": -1.5865767151007626
+  },
+  "benign": {
+   "text_plain": 5.784515788477096,
+   "text_wrap": 13.798848112713602,
+   "image_wrap": 29.847132305537507
+  }
+ },
+ "platform_factor": 0.993668344870482,
+ "primary": "NOT SUPPORTED"
+}

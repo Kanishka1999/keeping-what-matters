@@ -1,0 +1,174 @@
+FULL RUN  2 cells x 2 seed(s)
+
+
+======================================================================
+A / Qwen3-1.7B / seed 0
+positive control before trusting A on a new architecture
+======================================================================
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 8601.40it/s]
+  SENSITIVITY  split_half_deg: can resolve >= 6.037  (n=200, floor 89.9 deg)
+  [PASS ] direction_reproducible       6.037 (need 45)  split-half angle; measured random floor 89.9 deg, margin 83.9
+  [PASS ] separability                 4.236 (need 0.8)  contrast effect size along the extracted direction
+  SENSITIVITY  min_resolvable_KL: can resolve >= 0.4193  (3x the bootstrap half-width of the mean-KL estimator)
+  [ABORT] ruler_headroom               0.3992 (need 0.4193)  effect vs 3x the model-vs-itself floor (0.14)
+  [PASS ] behaviour_moved              6.333 (need 1.68)  intervention must shift behaviour >= 20% of baseline
+    fisher 32/48
+  standard k=1  KL=0.4112 removed=+5.953 [+2.02,+2.86] (unresolved)
+  standard k=2  KL=1.4799 removed=+9.518 [-1.66,-0.59] (unresolved)
+  standard k=3  KL=1.5271 removed=+4.201 [+3.75,+4.66] 
+  standard k=4  KL=1.1776 removed=+4.206 [+3.74,+4.65] 
+  standard k=5  KL=1.2603 removed=+4.314 [+3.63,+4.54] 
+  standard k=6  KL=1.5509 removed=+3.784 [+4.16,+5.08] 
+  standard k=7  KL=1.6658 removed=+3.518 [+4.40,+5.36] 
+  standard k=8  KL=1.5476 removed=+3.457 [+4.48,+5.40] 
+  standard k=9  KL=1.5610 removed=+3.022 [+4.93,+5.83] 
+  standard k=10 KL=1.8171 removed=+3.045 [+4.90,+5.81] 
+  standard k=11 KL=1.8631 removed=+2.689 [+5.24,+6.17] 
+  standard k=12 KL=1.9577 removed=+3.407 [+4.53,+5.46] 
+  fisher   k=1  KL=0.2654 removed=+5.770 [+2.21,+3.05] (unresolved)
+  fisher   k=2  KL=1.3006 removed=+7.854 [+0.04,+1.03] (unresolved)
+  fisher   k=3  KL=1.3577 removed=+3.771 [+4.21,+5.03] 
+  fisher   k=4  KL=1.2477 removed=+3.482 [+4.48,+5.34] 
+  fisher   k=5  KL=1.4984 removed=+3.936 [+4.01,+4.90] 
+  fisher   k=6  KL=1.7092 removed=+4.446 [+3.52,+4.40] 
+  fisher   k=7  KL=1.8413 removed=+3.934 [+4.02,+4.92] 
+  fisher   k=8  KL=1.6110 removed=+3.996 [+3.96,+4.84] 
+  fisher   k=9  KL=1.6356 removed=+3.795 [+4.17,+5.03] 
+  fisher   k=10 KL=1.6139 removed=+3.678 [+4.29,+5.14] 
+  fisher   k=11 KL=1.6188 removed=+3.250 [+4.71,+5.57] 
+  fisher   k=12 KL=1.7651 removed=+3.845 [+4.14,+4.97] 
+
+>>> A_rank_cost / Qwen3-1.7B -> complete  swept k=1..12 on both writebacks  (128s)
+
+======================================================================
+A / Qwen3-1.7B / seed 1
+positive control before trusting A on a new architecture
+======================================================================
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 8507.49it/s]
+  SENSITIVITY  split_half_deg: can resolve >= 5.143  (n=200, floor 90.1 deg)
+  [PASS ] direction_reproducible       5.143 (need 45)  split-half angle; measured random floor 90.1 deg, margin 84.9
+  [PASS ] separability                 3.608 (need 0.8)  contrast effect size along the extracted direction
+  SENSITIVITY  min_resolvable_KL: can resolve >= 0.2645  (3x the bootstrap half-width of the mean-KL estimator)
+  [ABORT] ruler_headroom               0.254 (need 0.2645)  effect vs 3x the model-vs-itself floor (0.0882)
+  [PASS ] behaviour_moved              9.003 (need 1.682)  intervention must shift behaviour >= 20% of baseline
+    fisher 32/48
+  standard k=1  KL=0.2499 removed=+8.707 [-0.74,+0.13] (unresolved)
+  standard k=2  KL=0.7532 removed=+8.516 [-0.50,+0.28] (unresolved)
+  standard k=3  KL=1.0575 removed=+6.891 [+1.06,+1.97] 
+  standard k=4  KL=1.8128 removed=+6.801 [+1.13,+2.08] 
+  standard k=5  KL=1.5860 removed=+8.039 [-0.05,+0.81] (unresolved)
+  standard k=6  KL=1.8872 removed=+7.995 [-0.00,+0.84] 
+  standard k=7  KL=1.9356 removed=+8.014 [-0.02,+0.82] 
+  standard k=8  KL=1.9875 removed=+7.520 [+0.52,+1.26] 
+  standard k=9  KL=1.8705 removed=+7.685 [+0.33,+1.09] 
+  standard k=10 KL=1.6984 removed=+7.833 [+0.21,+0.93] 
+  standard k=11 KL=2.0482 removed=+7.459 [+0.59,+1.31] 
+  standard k=12 KL=2.1128 removed=+7.011 [+1.08,+1.72] 
+  fisher   k=1  KL=0.2232 removed=+8.554 [-0.60,+0.28] (unresolved)
+  fisher   k=2  KL=0.7089 removed=+8.130 [-0.12,+0.66] (unresolved)
+  fisher   k=3  KL=1.0847 removed=+7.101 [+0.86,+1.73] 
+  fisher   k=4  KL=1.4864 removed=+6.819 [+1.12,+2.04] 
+  fisher   k=5  KL=1.2953 removed=+7.389 [+0.59,+1.44] 
+  fisher   k=6  KL=1.5378 removed=+7.270 [+0.70,+1.56] 
+  fisher   k=7  KL=1.6820 removed=+7.188 [+0.79,+1.63] 
+  fisher   k=8  KL=1.6949 removed=+6.816 [+1.20,+1.98] 
+  fisher   k=9  KL=1.6044 removed=+7.159 [+0.85,+1.63] 
+  fisher   k=10 KL=1.2865 removed=+6.800 [+1.21,+1.99] 
+  fisher   k=11 KL=1.5038 removed=+6.357 [+1.67,+2.42] 
+  fisher   k=12 KL=1.5681 removed=+6.270 [+1.78,+2.48] 
+
+>>> A_rank_cost / Qwen3-1.7B -> complete  swept k=1..12 on both writebacks  (127s)
+
+======================================================================
+A / Qwen3.5-2B / seed 0
+primary
+======================================================================
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 8516.79it/s]
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+  SENSITIVITY  split_half_deg: can resolve >= 8.57  (n=200, floor 89.9 deg)
+  [PASS ] direction_reproducible       8.57 (need 45)  split-half angle; measured random floor 89.9 deg, margin 81.3
+  [PASS ] separability                 6.27 (need 0.8)  contrast effect size along the extracted direction
+  SENSITIVITY  min_resolvable_KL: can resolve >= 0.09748  (3x the bootstrap half-width of the mean-KL estimator)
+  [PASS ] ruler_headroom               0.1436 (need 0.09748)  effect vs 3x the model-vs-itself floor (0.0325)
+  [PASS ] behaviour_moved              3.33 (need 0.9569)  intervention must shift behaviour >= 20% of baseline
+    fisher: cache hit 8bac3d0fc7269b58
+  standard k=1  KL=0.1572 removed=+3.277 [+1.29,+1.71] 
+  standard k=2  KL=0.1571 removed=+3.323 [+1.24,+1.67] 
+  standard k=3  KL=0.1557 removed=+3.366 [+1.20,+1.62] 
+  standard k=4  KL=0.1561 removed=+3.339 [+1.23,+1.65] 
+  standard k=5  KL=0.1561 removed=+3.169 [+1.40,+1.82] 
+  standard k=6  KL=0.1669 removed=+3.107 [+1.45,+1.88] 
+  standard k=7  KL=0.1746 removed=+3.161 [+1.40,+1.83] 
+  standard k=8  KL=0.1700 removed=+3.100 [+1.47,+1.89] 
+  standard k=9  KL=0.1650 removed=+3.140 [+1.42,+1.85] 
+  standard k=10 KL=0.1698 removed=+3.229 [+1.34,+1.76] 
+  standard k=11 KL=0.1697 removed=+3.158 [+1.41,+1.83] 
+  standard k=12 KL=0.1727 removed=+3.112 [+1.45,+1.88] 
+  fisher   k=1  KL=0.1648 removed=+3.431 [+1.15,+1.55] 
+  fisher   k=2  KL=0.1651 removed=+3.453 [+1.12,+1.53] 
+  fisher   k=3  KL=0.1637 removed=+3.493 [+1.09,+1.48] 
+  fisher   k=4  KL=0.1652 removed=+3.465 [+1.11,+1.51] 
+  fisher   k=5  KL=0.1685 removed=+3.339 [+1.24,+1.64] 
+  fisher   k=6  KL=0.1703 removed=+3.353 [+1.22,+1.63] 
+  fisher   k=7  KL=0.1754 removed=+3.376 [+1.20,+1.61] 
+  fisher   k=8  KL=0.1738 removed=+3.327 [+1.25,+1.66] 
+  fisher   k=9  KL=0.1680 removed=+3.382 [+1.19,+1.60] 
+  fisher   k=10 KL=0.1680 removed=+3.436 [+1.14,+1.55] 
+  fisher   k=11 KL=0.1704 removed=+3.362 [+1.21,+1.62] 
+  fisher   k=12 KL=0.1741 removed=+3.351 [+1.22,+1.63] 
+
+>>> A_rank_cost / Qwen3.5-2B -> complete  swept k=1..12 on both writebacks  (407s)
+
+======================================================================
+A / Qwen3.5-2B / seed 1
+primary
+======================================================================
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 8571.28it/s]
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+  SENSITIVITY  split_half_deg: can resolve >= 8.29  (n=200, floor 90.1 deg)
+  [PASS ] direction_reproducible       8.29 (need 45)  split-half angle; measured random floor 90.1 deg, margin 81.8
+  [PASS ] separability                 5.925 (need 0.8)  contrast effect size along the extracted direction
+  SENSITIVITY  min_resolvable_KL: can resolve >= 0.1002  (3x the bootstrap half-width of the mean-KL estimator)
+  [PASS ] ruler_headroom               0.146 (need 0.1002)  effect vs 3x the model-vs-itself floor (0.0334)
+  [PASS ] behaviour_moved              3.326 (need 0.9572)  intervention must shift behaviour >= 20% of baseline
+    fisher: cache hit 313b1d382bf6b6bf
+  standard k=1  KL=0.1643 removed=+3.283 [+1.28,+1.71] 
+  standard k=2  KL=0.1591 removed=+3.362 [+1.20,+1.63] 
+  standard k=3  KL=0.1588 removed=+3.352 [+1.21,+1.64] 
+  standard k=4  KL=0.1592 removed=+3.280 [+1.28,+1.72] 
+  standard k=5  KL=0.1608 removed=+3.320 [+1.24,+1.68] 
+  standard k=6  KL=0.1732 removed=+3.284 [+1.28,+1.72] 
+  standard k=7  KL=0.1812 removed=+3.291 [+1.27,+1.72] 
+  standard k=8  KL=0.1789 removed=+3.318 [+1.24,+1.69] 
+  standard k=9  KL=0.1750 removed=+3.385 [+1.17,+1.62] 
+  standard k=10 KL=0.1700 removed=+3.374 [+1.19,+1.63] 
+  standard k=11 KL=0.1705 removed=+3.395 [+1.16,+1.61] 
+  standard k=12 KL=0.1761 removed=+3.129 [+1.42,+1.88] 
+  fisher   k=1  KL=0.1745 removed=+3.805 [+0.78,+1.18] 
+  fisher   k=2  KL=0.1664 removed=+3.843 [+0.74,+1.14] 
+  fisher   k=3  KL=0.1676 removed=+3.843 [+0.73,+1.14] 
+  fisher   k=4  KL=0.1716 removed=+3.768 [+0.81,+1.22] 
+  fisher   k=5  KL=0.1701 removed=+3.821 [+0.75,+1.17] 
+  fisher   k=6  KL=0.1815 removed=+3.787 [+0.78,+1.21] 
+  fisher   k=7  KL=0.1963 removed=+3.772 [+0.80,+1.22] 
+  fisher   k=8  KL=0.1904 removed=+3.823 [+0.75,+1.17] 
+  fisher   k=9  KL=0.1873 removed=+3.855 [+0.71,+1.14] 
+  fisher   k=10 KL=0.1777 removed=+3.851 [+0.72,+1.14] 
+  fisher   k=11 KL=0.1790 removed=+3.894 [+0.68,+1.10] 
+  fisher   k=12 KL=0.1928 removed=+3.674 [+0.89,+1.32] 
+
+>>> A_rank_cost / Qwen3.5-2B -> complete  swept k=1..12 on both writebacks  (414s)
+
+======================================================================
+SUMMARY
+======================================================================
+  A  Qwen3-1.7B     seed 0  ok        136s
+  A  Qwen3-1.7B     seed 1  ok        136s
+  A  Qwen3.5-2B     seed 0  ok        415s
+  A  Qwen3.5-2B     seed 1  ok        422s

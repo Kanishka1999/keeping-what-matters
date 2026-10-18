@@ -1,0 +1,20 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/617 [00:00<?, ?it/s]Loading weights: 100%|██████████| 617/617 [00:00<00:00, 9213.49it/s]
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+text_plain     harmful +4.80  harmless -2.44  gap +7.24  d +2.87
+image_wrap     harmful +3.80  harmless -1.94  gap +5.74  d +2.39
+natural_image  harmful +1.54  harmless -0.97  gap +2.51  d +1.38
+natural_text   harmful -0.54  harmless -2.14  gap +1.60  d +0.75
+geometry: {"layer": 19, "split_half_deg": {"text_plain": 9.665482298230433, "image_wrap": 9.763318327574765, "natural_image": 12.924942855196418, "natural_text": 18.408889259054344}, "angle_deg": {"text_plain|image_wrap": 42.36264388115221, "text_plain|natural_image": 77.63038587013146, "text_plain|natural_text": 79.43799365421187}, "text_dir_on_natural_image_d": 0.9429616928100586}
+ablate text_dir           kept: text_plain 0.05  image_wrap 0.35  natural_image 0.66  natural_text 0.44  ARC t/i 0.93/0.86
+ablate natural_image_dir  kept: text_plain 0.66  image_wrap 0.65  natural_image 0.11  natural_text 0.66  ARC t/i 0.90/0.81
+ablate random_dir         kept: text_plain 0.99  image_wrap 1.02  natural_image 1.01  natural_text 1.02  ARC t/i 0.91/0.85
+  generated n 80  gap +1.93  kept after text-dir ablation 0.85
+  real      n 80  gap +3.09  kept after text-dir ablation 0.53
+  [PASS] natural_refusal_present gap +2.51, d +1.38
+  [PASS] text_dir_reproducible 
+  [PASS] random_control_inert 
+  [PASS] capability_intact 
+prediction: natural-image refusal kept after text-direction ablation 0.66 -> PASS
+done in 24.9 min -> results/E_natural__Qwen3.5-2B__seed0.json

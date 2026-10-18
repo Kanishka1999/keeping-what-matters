@@ -1,0 +1,48 @@
+{
+ "written": "2026-09-25 18:06:17 UTC",
+ "training_started": "2026-09-25 18:06:17 UTC",
+ "rule": "docs/preregistration.md section 1",
+ "retrodiction_spearman": 0.942857142857143,
+ "retrodiction_valid": true,
+ "k": 0.19777513000605818,
+ "predicted_loss_pct": {
+  "legal": {
+   "text_plain": 2.149548530409159,
+   "text_wrap": 2.975383044378386,
+   "image_wrap": -1.4243183928815237
+  },
+  "news": {
+   "text_plain": 3.1829603128214092,
+   "text_wrap": 3.4548809789952806,
+   "image_wrap": 7.631158144312215
+  }
+ },
+ "flags": {
+  "ood": "ok",
+  "benign": "ok",
+  "legal": "ok",
+  "news": "ok"
+ },
+ "predicted_order_by_wrapped_loss_low_to_high": [
+  "legal",
+  "news",
+  "ood",
+  "benign"
+ ],
+ "p2_image_over_wrapped_score": {
+  "ood": 0.9460175379377235,
+  "benign": 2.297545855829157
+ },
+ "known": {
+  "ood": {
+   "text_plain": 0.912,
+   "text_wrap": 2.479,
+   "image_wrap": 3.472
+  },
+  "benign": {
+   "text_plain": 5.786,
+   "text_wrap": 13.965,
+   "image_wrap": 29.87
+  }
+ }
+}

@@ -1,0 +1,13 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/617 [00:00<?, ?it/s]Loading weights: 100%|██████████| 617/617 [00:00<00:00, 8750.63it/s]
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+{"shared_fraction_of_v_img": 0.7530962824821472, "specific_fraction_of_v_img": 0.6579105854034424, "cos_with_modality_offset": {"text_dir": -0.023580919951200485, "image_dir": -0.01716746762394905, "image_specific": 0.0008986536413431168}, "separation_d": {"image_inputs_along_shared": 2.515871047973633, "image_inputs_along_specific": 2.126023769378662, "text_inputs_along_specific": -7.992784958332777e-07}}
+remove image_dir_repro  value kept text 0.31 image 0.20  ARC t/i 0.77/0.69  (baseline 0.92/0.84)
+remove image_specific   value kept text 0.89 image 0.65  ARC t/i 0.92/0.82  (baseline 0.92/0.84)
+remove both_parts       value kept text 0.26 image 0.20  ARC t/i 0.76/0.71  (baseline 0.92/0.84)
+remove random           value kept text 0.93 image 0.92  ARC t/i 0.91/0.85  (baseline 0.92/0.84)
+  [PASS] random_inert
+  [PASS] layer_matches_prior
+  [PASS] repro_matches_prior
+done in 45.6 min -> results/E_split_value__Qwen3.5-2B__seed0.json

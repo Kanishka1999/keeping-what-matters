@@ -1,0 +1,188 @@
+{
+  "experiment": "C_geometry",
+  "model_label": "Qwen3.5-2B",
+  "seed": 0,
+  "config": {
+    "n_refusal": 200,
+    "n_value": 340,
+    "dry": false,
+    "refusal_hash": "64fbd93b1ee4d41a",
+    "value_hash": "498f4ca7d50eaedb"
+  },
+  "environment": {
+    "torch": "2.13.0",
+    "transformers": "5.17.0",
+    "python": "3.13.9",
+    "platform": "macOS-26.5.2-arm64-arm-64bit-Mach-O",
+    "git_rev": null
+  },
+  "started": "2026-09-23 21:44:51",
+  "status": "complete",
+  "gates": [
+    {
+      "name": "direction_reproducible",
+      "status": "PASS",
+      "value": 8.241167518401216,
+      "threshold": 45.0,
+      "detail": "split-half angle; measured random floor 89.9 deg, margin 81.7",
+      "extra": {
+        "random_floor_deg": 89.90130013191435
+      }
+    },
+    {
+      "name": "separability",
+      "status": "PASS",
+      "value": 6.395174980163574,
+      "threshold": 0.8,
+      "detail": "contrast effect size along the extracted direction",
+      "extra": {}
+    },
+    {
+      "name": "direction_reproducible",
+      "status": "PASS",
+      "value": 15.916019125594184,
+      "threshold": 45.0,
+      "detail": "split-half angle; measured random floor 89.9 deg, margin 74.0",
+      "extra": {
+        "random_floor_deg": 89.90130013191435
+      }
+    },
+    {
+      "name": "separability",
+      "status": "PASS",
+      "value": 4.614466667175293,
+      "threshold": 0.8,
+      "detail": "contrast effect size along the extracted direction",
+      "extra": {}
+    }
+  ],
+  "sensitivity": [
+    {
+      "quantity": "refusal_split_half",
+      "resolvable": 8.241167518401216,
+      "basis": "n=200 at layer 18, floor 89.9 deg"
+    },
+    {
+      "quantity": "value_split_half",
+      "resolvable": 15.916019125594184,
+      "basis": "n=340 at layer 20, floor 89.9 deg"
+    }
+  ],
+  "cells": [
+    {
+      "kind": "refusal",
+      "layer": 18,
+      "split_half_deg": 8.241167518401216,
+      "cohens_d_oos": 6.395174980163574,
+      "random_floor_deg": 89.90130013191435,
+      "power_curve": [
+        {
+          "n": 50,
+          "split_half_deg": 16.995250614266055
+        },
+        {
+          "n": 100,
+          "split_half_deg": 16.515189516089574
+        },
+        {
+          "n": 200,
+          "split_half_deg": 8.241167518401216
+        }
+      ],
+      "spectrum": {
+        "stable_rank": 8.904626846313477,
+        "participation_ratio": 11.583159446716309,
+        "top1_frac": 0.11230117082595825,
+        "top2_frac": 0.22058741748332977
+      }
+    },
+    {
+      "kind": "value",
+      "layer": 20,
+      "split_half_deg": 15.916019125594184,
+      "cohens_d_oos": 4.614466667175293,
+      "random_floor_deg": 89.90130013191435,
+      "power_curve": [
+        {
+          "n": 50,
+          "split_half_deg": 29.665542277102773
+        },
+        {
+          "n": 100,
+          "split_half_deg": 30.872153187667735
+        },
+        {
+          "n": 200,
+          "split_half_deg": 19.10014620001189
+        },
+        {
+          "n": 340,
+          "split_half_deg": 15.916019125594184
+        }
+      ],
+      "spectrum": {
+        "stable_rank": 7.789937496185303,
+        "participation_ratio": 11.602566719055176,
+        "top1_frac": 0.1283707320690155,
+        "top2_frac": 0.22359229624271393
+      }
+    },
+    {
+      "comparison": "refusal_vs_value",
+      "angle_deg": 87.57729987276875,
+      "cos": 0.04227149486541748,
+      "interpretation": "independent"
+    }
+  ],
+  "controls": {
+    "refusal_permutation": {
+      "shuffled_split_half_deg": 92.67685189700863,
+      "shuffled_cohens_d_oos": 0.081351765897125,
+      "random_floor_deg": 89.90130013191435,
+      "n_rep": 5
+    },
+    "refusal_estimators": {
+      "agreement_deg": 47.895177096894116,
+      "cosine": 0.6704890727996826
+    },
+    "value_permutation": {
+      "shuffled_split_half_deg": 88.08991593015408,
+      "shuffled_cohens_d_oos": 0.06684285849332809,
+      "random_floor_deg": 89.90130013191435,
+      "n_rep": 5
+    },
+    "value_estimators": {
+      "agreement_deg": 31.25621457386511,
+      "cosine": 0.8548555970191956
+    }
+  },
+  "elapsed_s": 151.0,
+  "provenance": {
+    "model": {
+      "hf_id": "Qwen/Qwen3.5-2B",
+      "label": "Qwen3.5-2B",
+      "generation": "3.5",
+      "attention": "gated_delta_net",
+      "declared_layers": 24,
+      "declared_hidden": 2048,
+      "notes": "primary: same generation and attention mechanism as Thomson's 397B-A17B base",
+      "transformers": "5.17.0",
+      "torch": "2.13.0",
+      "measured_params": 1881825088,
+      "measured_layers": 24,
+      "writers_per_layer": [
+        "linear_attn.out_proj",
+        "mlp.down_proj"
+      ]
+    },
+    "chat_suffix": "|im_start|>assistant\n<think>\n\n</think>\n\n",
+    "frozen": {
+      "geometry.py": "2472ef80f33e1024",
+      "measure.py": "5d13174b0311f556",
+      "gates.py": "c3d590a2520a448a",
+      "controls.py": "2e8af411dff962cd"
+    }
+  },
+  "note": "refusal vs value = 87.6 deg",
+  "finished": "2026-09-23 21:47:22"
+}

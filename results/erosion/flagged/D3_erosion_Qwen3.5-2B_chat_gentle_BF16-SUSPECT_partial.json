@@ -1,0 +1,80 @@
+[
+ {
+  "arm": "benign",
+  "tokens": 4096,
+  "train_loss": 1.7139825224876404,
+  "minutes": 42.54719863335291,
+  "arc_net_lost": 0,
+  "arc_text": 0.9166666666666666,
+  "arc_image": 0.83,
+  "kept_text_plain": 1.0001574804093372,
+  "kept_text_wrap": 0.9978652692735748,
+  "kept_image_wrap": 1.000777592947624,
+  "binding": 0.15000000000000002,
+  "kept_binding": 0.8181818181818182,
+  "ppl_ratio": 0.9982030463019562,
+  "baseline": {
+   "arc_text": 0.9166666666666666,
+   "arc_image": 0.82,
+   "gap_text_plain": 7.161016941070557,
+   "gap_text_wrap": 8.055655479431152,
+   "gap_image_wrap": 5.548433303833008,
+   "bind_own": 0.7666666666666667,
+   "bind_mis": 0.5833333333333334,
+   "binding": 0.18333333333333335,
+   "ppl": 11.875692541249633
+  }
+ },
+ {
+  "arm": "benign",
+  "tokens": 8192,
+  "train_loss": 2.7522592544555664,
+  "minutes": 84.74802078008652,
+  "arc_net_lost": -3,
+  "arc_text": 0.9266666666666666,
+  "arc_image": 0.82,
+  "kept_text_plain": 0.9981585113233742,
+  "kept_text_wrap": 0.9989005521153332,
+  "kept_image_wrap": 1.0006012422923936,
+  "binding": 0.15833333333333333,
+  "kept_binding": 0.8636363636363635,
+  "ppl_ratio": 0.9979949902228678,
+  "baseline": {
+   "arc_text": 0.9166666666666666,
+   "arc_image": 0.82,
+   "gap_text_plain": 7.161016941070557,
+   "gap_text_wrap": 8.055655479431152,
+   "gap_image_wrap": 5.548433303833008,
+   "bind_own": 0.7666666666666667,
+   "bind_mis": 0.5833333333333334,
+   "binding": 0.18333333333333335,
+   "ppl": 11.875692541249633
+  }
+ },
+ {
+  "arm": "benign",
+  "tokens": 16384,
+  "train_loss": 2.8410313725471497,
+  "minutes": 127.26114191214243,
+  "arc_net_lost": -2,
+  "arc_text": 0.9233333333333333,
+  "arc_image": 0.83,
+  "kept_text_plain": 0.9993917860216127,
+  "kept_text_wrap": 0.9947074494312574,
+  "kept_image_wrap": 0.9987792959518071,
+  "binding": 0.17500000000000004,
+  "kept_binding": 0.9545454545454547,
+  "ppl_ratio": 0.994720823413794,
+  "baseline": {
+   "arc_text": 0.9166666666666666,
+   "arc_image": 0.82,
+   "gap_text_plain": 7.161016941070557,
+   "gap_text_wrap": 8.055655479431152,
+   "gap_image_wrap": 5.548433303833008,
+   "bind_own": 0.7666666666666667,
+   "bind_mis": 0.5833333333333334,
+   "binding": 0.18333333333333335,
+   "ppl": 11.875692541249633
+  }
+ }
+]

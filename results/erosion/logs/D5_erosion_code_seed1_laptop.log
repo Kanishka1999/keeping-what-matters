@@ -1,0 +1,21 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+ARC 300 (image 100) | refusal pairs 64 | ScienceQA 120 | RT 10 CT 14
+
+=== ood ===
+Loading weights:   0%|          | 0/473 [00:00<?, ?it/s]Loading weights:   0%|          | 1/473 [00:00<03:21,  2.34it/s]Loading weights: 100%|██████████| 473/473 [00:00<00:00, 1091.60it/s]
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+gates PASS
+[ood] MEASURED train 274 tok/s, one full read 3.4 min -> this arm ~1.5 h
+[ood] baseline  ARC t/i 0.860/0.780  gap txt/img +5.79/+1.79  bind +0.117
+Repo card metadata block was not found. Setting CardData to empty.
+[ood]     4,096 tok  ARC net lost  +0  ARC-img 0.78  refusal kept txt 0.999 img 0.997  bind kept 1.07  [4m]
+[ood]     8,192 tok  ARC net lost  +0  ARC-img 0.78  refusal kept txt 0.999 img 0.997  bind kept 1.07  [8m]
+[ood]    16,384 tok  ARC net lost  +0  ARC-img 0.78  refusal kept txt 0.998 img 0.990  bind kept 1.00  [12m]
+[ood]    32,768 tok  ARC net lost  -1  ARC-img 0.78  refusal kept txt 0.994 img 0.981  bind kept 0.93  [16m]
+[ood]    65,536 tok  ARC net lost  +0  ARC-img 0.79  refusal kept txt 0.991 img 0.969  bind kept 0.86  [22m]
+[ood]   131,072 tok  ARC net lost  +1  ARC-img 0.79  refusal kept txt 0.985 img 0.960  bind kept 0.79  [30m]
+[ood]   258,048 tok  ARC net lost  +0  ARC-img 0.78  refusal kept txt 0.975 img 0.955  bind kept 0.86  [41m]
+[ood]   512,000 tok  ARC net lost  +0  ARC-img 0.78  refusal kept txt 0.967 img 0.951  bind kept 0.93  [60m]
+[ood] 1,003,520 tok  ARC net lost  +1  ARC-img 0.77  refusal kept txt 0.943 img 0.953  bind kept 0.93  [94m]
+summary skipped: an arm is missing (per-arm files are still saved)
